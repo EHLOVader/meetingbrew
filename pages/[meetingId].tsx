@@ -96,7 +96,7 @@ export default function MeetingPage() {
   // copies invite link to clipboard
   async function copyLink() {
     if (!meeting) return
-    await navigator.clipboard.writeText(`https://meetingbrew.com/${meeting.id}`)
+    await navigator.clipboard.writeText(window.location.href)
     // show copy state
     if (copied) return
     setCopied(true)
